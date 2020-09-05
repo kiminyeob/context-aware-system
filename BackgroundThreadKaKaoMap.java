@@ -1,3 +1,13 @@
+/*
+
+    아래 코드를 main code (i.e., onCreate()) 에 작성하여 Thread를 실행할 수 있다.
+    
+    BackgroundThreadKaKaoMap thread = new BackgroundThreadKaKaoMap();
+    thread.start();
+
+*/
+
+
 class BackgroundThreadKaKaoMap extends Thread {
 
     /*
