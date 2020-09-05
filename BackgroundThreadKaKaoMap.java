@@ -30,6 +30,7 @@ class BackgroundThreadKaKaoMap extends Thread {
         String page;
 
         2. 인터넷에 연결이 안되어 있거나, 결과 값을 받아오지 못할 시에 처리할 코드 작성
+        3. JSON으로 결과 값 받아서 처리하는 코드 추가
 
     */
 
@@ -46,11 +47,13 @@ class BackgroundThreadKaKaoMap extends Thread {
                 URL url = new URL(url_address);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
+
+                // header 추가하기
                 conn.setRequestProperty("Authorization", "KakaoAK 1b6cd110fcde5815d96f676aaab63db2");
+
                 InputStream is = conn.getInputStream();
 
                 InputStreamReader responseBodyReader = new InputStreamReader(is, "UTF-8");
-                JsonReader jsonReader = new JsonReader(responseBodyReader);
 
                 //Get the stream
                 StringBuilder builder = new StringBuilder();
