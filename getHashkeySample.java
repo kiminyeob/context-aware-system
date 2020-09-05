@@ -1,3 +1,8 @@
+/*
+파일 상단에 import할 것!
+import android.content.pm.Signature;
+*/
+
 private void getHashKey(){
   PackageInfo packageInfo = null;
   try {
