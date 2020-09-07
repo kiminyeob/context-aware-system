@@ -6,14 +6,14 @@ Location 객체를 저장할 수 있는 Class
 
  */
 
-public class LocationInformation {
+public class LocationInformationClass {
     String place_name;
     String address_name;
     String road_address_name;
     String x;
     String y;
 
-    public LocationInformation(String place_name, String address_name, String road_address_name, String x, String y){
+    public LocationInformationClass (String place_name, String address_name, String road_address_name, String x, String y){
         this.place_name = place_name;
         this.address_name = address_name;
         this.road_address_name = road_address_name;
